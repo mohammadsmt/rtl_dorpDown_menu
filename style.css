@@ -1,0 +1,142 @@
+#menu,
+#menu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#menu {
+    width: 90%;
+    margin: 60px auto;
+    border: 1px solid #125fc9;
+    background-color: #125fc9;
+    border-radius: 3px;
+    box-shadow: 0 1px 1px #777;
+}
+
+#menu:before,
+#menu:after {
+    content: "";
+    display: table;
+}
+
+#menu:after {
+    clear: both;
+}
+
+#menu {
+    zoom: 1;
+}
+
+#menu li {
+    float: right;
+    border-right: 1px solid #025697;
+    border-bottom: 1px solid #025697;
+    border-left: 1px solid #025697;
+    box-shadow: 1px 0 0 #444;
+    position: relative;
+}
+
+#menu a {
+    float: right;
+    padding: 12px 30px;
+    color: #eee;
+    text-transform: uppercase;
+    font: bold 12px isans, Arial, Helvetica;
+    text-decoration: none;
+    text-shadow: 0 1px 0 #000;
+}
+
+#menu li:hover > a {
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+}
+
+#menu ul {
+    margin: 20px 0 0 0;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 38px;
+    right: 0;
+    z-index: 1;
+    background: #125fc9;
+    box-shadow: 0 -1px 0 rgba(255, 255, 255, .3);
+    border-radius: 2px;
+    transition: all .3s ease-in-out;
+}
+
+#menu li:hover > ul {
+    opacity: 1;
+    visibility: visible;
+    margin: 0;
+}
+
+#menu ul ul {
+    top: 0;
+    right: 100%;
+    margin: 0 0 0 20px;
+    box-shadow: -1px 0 0 rgba(255, 255, 255, .3);
+}
+
+#menu ul li {
+    float: none;
+    display: block;
+    border: 0;
+    box-shadow: 0 1px 0 #111, 0 2px 0 #666;
+}
+
+#menu ul li:last-child {
+    box-shadow: none;
+}
+
+#menu ul a {
+    padding: 10px;
+    display: block;
+    white-space: nowrap;
+    float: none;
+    text-transform: none;
+}
+
+#menu ul a:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+}
+
+#menu ul li:first-child > a {
+    border-radius: 2px 2px 0 0;
+}
+
+#menu ul li:first-child > a:after {
+    content: '';
+    position: absolute;
+    right: 40px;
+    top: -6px;
+    /*sakhte felesh balaye menu*/
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-bottom: 7px solid #0789b4;
+}
+
+#menu ul ul li:first-child a:after {
+    right: -6px;
+    top: 50%;
+    margin-top: -6px;
+    border-right: 0;
+    border-bottom: 7px solid transparent;
+    border-top: 7px solid transparent;
+    border-left: 7px solid #0789b4;
+}
+
+#menu ul li:first-child a:hover:after {
+    border-bottom-color: #0789b4;
+}
+
+#menu ul ul li:first-child a:hover:after {
+    border-right-color: #0789b4;
+    border-bottom-color: transparent;
+}
+
+#menu ul li:last-child > a {
+    border-radius: 0 0 2px 2px;
+}
